@@ -1,0 +1,43 @@
+#carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  width: 600px;
+  height: auto;
+}
+
+#carousel-prev-btn,
+#carousel-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#carousel-prev-btn:hover,
+#carousel-next-btn:hover {
+  border-color: #bfbfbf;
+}
+
+#carousel-prev-btn {
+  left: 20px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#carousel-next-btn {
+  right: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
