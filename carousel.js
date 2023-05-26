@@ -14,6 +14,11 @@ let currIdx = 1;
 carouselContainer.style.width = `${itemWidth}px`;
 prevButton.style.display = "none";
 
+if (totalItems === 1) {
+  nextButton.style.display = "none";
+  prevButton.style.display = "none";
+}
+
 function hideOrShowButton() {
   nextButton.style.display = "block";
   prevButton.style.display = "block";
@@ -31,7 +36,7 @@ function showPreviousSlide() {
   currIdx = currIdx-- === 0 ? 0 : currIdx--;
   hideOrShowButton();
 
-  const translate = `-${itemWidth * (currIdx - itemWidth)}`;
+  const translate = `-${itemWidth * currIdx - itemWidth}`;
 
   carousel.style.transform = `translateX(${translate}px)`;
 }
